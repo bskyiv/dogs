@@ -21,3 +21,4 @@ for animal in (cat1, cat2, dog1):
     animal.make_sound()
     animal.info()
     animal.make_sound()
+
