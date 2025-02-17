@@ -6,25 +6,22 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
+        self.button_is_checked = True
+
         self.setWindowTitle("My App")
 
         button = QPushButton("Press Me!")
         button.setCheckable(True)
-        button.clicked.connect(self.say_hello)
-        button.clicked.connect(self.the_button_was_clicked)
         button.clicked.connect(self.the_button_was_toggled)
+        button.setChecked(self.button_is_checked)
 
         self.setCentralWidget(button)
 
-    def say_hello(self):
-        print("Button clicked, Hello!")
+    def the_button_was_toggled(self, checked):
+        self.button_is_checked = checked
 
-    def the_button_was_clicked(self):
-        print("Clicked!")
+        print(self.button_is_checked)
 
-    def the_button_was_toggled(self, checked1):
-        print("Checked?", checked1)
-        print("Checked?")
 
 app = QApplication(sys.argv)
 
