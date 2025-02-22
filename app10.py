@@ -5,19 +5,24 @@ class MyClass:
         print("Здравствуйте")
 
 class Humans:
-    def __init__(self, name, age, age_of_child):
+    def __init__(self, name="Sara", age=33, age_of_child=25):
         self.name = name
         self.age = age
         self.age_of_child = age_of_child
         self.caramba()
-        a = Ben()
+        mike = Ben()
+        self.rondo = 78
+
 
     def sum_of_all_age(self):
         print(self.age + self.age_of_child)
+        self.proba = 232
+        pass
 
     def sum_of_all_age2(self):
         self.sum_of_all_age()
         print(self.age + self.age_of_child +2)
+        pass
 
     def caramba (self):
         print("caramba")
@@ -27,6 +32,15 @@ class Ben:
         pass
         print("supercBen")
 
+    def test(self):
+        a=5
+        b=7
+        c = a+b
+        print(c)
+
+    def testprint(self):
+        c = 13
+        print(c)
 
 # Правильное применение:
 bob_the_object = MyClass()  # Познакомьтесь, это Боб – экземпляр класса.
@@ -36,4 +50,18 @@ man = Humans("John", 25, 40)
 man.sum_of_all_age()
 man.sum_of_all_age2()
 
+woman = Humans()
+woman.sum_of_all_age()
+woman.sum_of_all_age2()
+
+john = Ben()
+john.test()
+john.testprint()
+
+
+
+print(dir(bob_the_object))
 print(dir(man))
+print(dir(john))
+
+print(dir(woman))

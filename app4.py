@@ -15,8 +15,9 @@ class MainWindow(QMainWindow):
 
         self.setCentralWidget(button)
 
-    def the_button_was_clicked(self):
-        print("Clicked!")
+    def the_button_was_clicked(self, clicked):
+        print("Clicked!", clicked)
+
 
     def the_button_was_toggled(self, checked):
         print("Checked?", checked)
