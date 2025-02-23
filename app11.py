@@ -3,6 +3,7 @@ class Clone:
         self.name = name
     def addValToSelf(self):
         self.val = 55
+        self.val1 = 66
 
     def make_new_clone(self, name):
         return Clone(name)
@@ -14,6 +15,8 @@ sheep_1.addValToSelf()
 
 print (sheep_1.name) # 'Dolly'
 print(sheep_1.val)
+print(sheep_1.val1)
+
 
 print (sheep_2.name) # 'Sally'
 #print(sheep_2.val)
